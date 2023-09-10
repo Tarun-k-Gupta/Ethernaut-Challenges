@@ -68,3 +68,10 @@ interface IERC20 {
 
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 }
+
+
+
+// UNDERSTAND THE CONCEPT FROM HERE: https://blog.dixitaditya.com/ethernaut-level-22-dex
+// Basically you need to exploit the division operation as it always gives an int value. So there is a loss in precision everytime.
+// Also, before calling pwn function of hack contract, you need to approve the allowance- See the exact steps, what to do from
+//https://www.youtube.com/watch?v=WD1vriVWVE4&t=558s
